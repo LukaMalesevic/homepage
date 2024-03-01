@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --deafault-shadow: 0px 0px 16px -1px rgba(0,0,0,0.75);
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body{
+    margin: auto;
+    height: 100%;
+    display: flex;
+    overflow-x: hidden;
+    justify-content: center;
+}
+
+p{
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+}
+
+h1{
+    font-family: "Playfair Display", sans-serif;
+    font-size: 4rem;
+}
+
+.blue-decoration{
+    background-color: #0891B2;
+    width: 200%;
+    height: 600px;
+    position: absolute;
+    top: -400px;
+    left: -200px;
+    box-shadow: var(--deafault-shadow);
+    transform: rotateZ(-10deg);
+}
+
+.about-me-container{
+    position: absolute;
+    max-width: 1250px;
+    min-height: 500px;
+    background-color: white;
+    box-shadow: var(--deafault-shadow);
+    margin: 150px;
+}
+
+.portrait{
+    max-height: 500px;
+    transform: scale(1.3);
+    box-shadow: var(--deafault-shadow);
+    float: left;
+    shape-outside: margin-box;
+    margin-right: 70px;
+    margin-bottom: 58px;
+}
+
+.socials{
+    display: flex;
+    justify-content: flex-end;
+    height: auto;
+    width: auto;
+    align-items:flex-end;
+    gap: 20px;
+    margin: 25px;
+}
+
+i{
+    font-size: 35px;
+}
+
+.about-me-container > h1, .about-me-container > p{
+    margin: 50px;
+    line-height: 35px;
+}
+
+.name{
+    position: absolute;
+    top: 450px;
+    color:white;
+    left: -55px;
+    text-shadow: 2px 3px 2px rgba(0,0,0,0.35);
+    font-size: 5rem;
+    margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+    .name{
+        top: -47px;
+        left: 200px;
+        margin: 0px !important;
+        text-wrap: nowrap;
+    }
+    .portrait{
+        max-height: 350px;
+    }
+    .about-me-container{
+        margin: 100px;
+    }
+    h1{
+        font-size: 4rem !important;
+    }
+}
+
+@media screen and (max-width: 695px) {
+    .name{ 
+        position: static !important;
+        margin: 0px !important;
+        text-wrap: nowrap;
+        font-size: 4.5rem !important;
+        text-wrap: wrap;
+        z-index: 1;
+    }
+    .portrait{
+        float: none;
+        margin: 0px !important;
+        position: absolute;
+        max-height: 400px;
+        top: -400px;
+    }
+    .about-me-container{
+        margin: 500px;
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: none;
+    }
+
+    p{
+        margin-top: 0 !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .name{
+        margin-top: -50px !important;
+        font-size: 4rem !important;
+    }
+
+    .portrait{
+        max-height: 350px;
+    }
+}
